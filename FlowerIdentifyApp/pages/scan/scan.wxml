@@ -1,0 +1,31 @@
+<view class="camera_box">
+  <camera class="camera" wx:if="{{!show}}" device-position="back" flash="off" binderror="error">
+    <cover-view class="id_m">
+      <cover-image class="img" src="../images/rect.png"></cover-image>
+    </cover-view>
+  </camera>
+  <image class="camera_img" src="{{src}}" wx:if="{{show}}" mode="aspectFill"></image>
+
+  <!-- <view class="tip-box" wx:if="{{!show}}">
+    <view class="scan-box">
+        <view class="scan-line" wx:for="{{line_color}}" style="background: {{item}}"></view>
+    </view>
+    <view class="tips">请将花朵放于中间，保持光线明亮</view>
+  </view> -->
+  <view class="shallow"></view>
+
+  
+  <view class="take" wx:if="{{!show}}">
+    <view class="take-album" bindtap="chooseImg" >
+      <image  src="../images/icon/album.png"></image>
+      <text>相册</text>
+    </view>
+    <image class="btn" src="../images/icon/btn.png" bindtap="takePhoto"></image>
+    <view style="width: 130rpx;height: 130rpx;"></view>
+  </view>
+
+  <view class="after-take" wx:if="{{show}}">
+    <image class="btn" src="../images/icon/retake.png" bindtap="cancelBtn"></image>
+    <image class="btn" src="../images/icon/upload.png" bindtap="saveImg"></image>
+  </view>
+</view>

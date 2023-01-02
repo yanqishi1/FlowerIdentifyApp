@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="img">
+        <image src="{{imgurl}}" mode="aspectFill"></image>
+    </view>
+    <view class="info">
+        <view class="table">
+            <text style="font-size:38rpx;">识别结果</text>
+                <view class="td">
+                  <rich-text nodes="<b class='b'>【名称】：</b>{{name}}"></rich-text>
+                  <rich-text nodes="<b class='b'>【百科资料】：</b><br><img src='{{example_img}}' style='float:left;clear: both;width:130px;height:130px;margin:8px 8px 8px 0;'>{{desc}}"></rich-text>
+                </view>          
+        </view>
+    </view>
+</view>

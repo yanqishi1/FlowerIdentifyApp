@@ -1,0 +1,22 @@
+<view class="big">
+    <view class="pic">
+        <view class="img">
+            <swiper autoplay="true" class="slid" interval="2000">
+                <swiper-item>
+                    <view class="headView" bindtap="PlantDetect" id="camera">
+                        <image class="icon" src="/images/logo.jpg"></image>
+                        <view class="icon"></view>
+                    </view>
+                    <view class="detail">
+                        <view class="userName">拍照智能识花</view>
+              AI智能技术识别花卉。
+            </view>
+                </swiper-item>
+            </swiper>
+            <button bindtap="PlantDetect" class="btn" id="camera">
+                <i-icon color="#fff" size="28" type="camera_fill"></i-icon> 拍照识别
+          </button>
+        </view>
+    </view>
+</view>
+<canvas canvas-id="canvas" style="width:{{cWidth}}px;height:{{cHeight}}px;position: absolute;left:-1000px;top:-1000px;"></canvas>

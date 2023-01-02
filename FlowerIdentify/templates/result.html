@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>识别结果</title>
+    <style>
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+     .result{
+         font-size: 4em;
+         color: forestgreen;
+     }
+    .msg{
+        font-size: 3em;
+    }
+    .back{
+        font-size: 3em;
+    }
+    </style>
+</head>
+<body>
+    <section class="main">
+        <h2 class="result">{{ name }}</h2>
+        {% load static %}
+        <img src=" /get_img?name={{ img_url }}" alt="样例图片">
+        <p class="msg">{{ desc }}</p>
+        <a class="back" href="/">返回</a>
+    </section>
+</body>
+</html>
